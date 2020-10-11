@@ -22,6 +22,15 @@ pipeline {
         }
     }
 
+    stages {
+        stage("artifact creation") {
+            steps {
+                archiveArtifacts artifacts: 'target/*.jar', excludes: 'target/*.txt
+            }
+        }
+    }
+
+
     post {
         always {
             cleanWs()
