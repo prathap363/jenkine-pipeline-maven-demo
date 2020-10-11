@@ -25,7 +25,7 @@ pipeline {
     stages {
         stage("artifact creation") {
             steps {
-                archiveArtifacts artifacts: 'target/*.jar', excludes: 'target/*.txt
+                archiveArtifacts artifacts: 'target/*.jar', excludes: 'target/*.txt'
             }
         }
     }
